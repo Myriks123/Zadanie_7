@@ -192,7 +192,7 @@ public class Lab7 extends JPanel implements GLEventListener {
 			needsRelease = true;
 		}
 
-		GL2 gl2 = context.getGL().getGL2(); // Gets the gl2 on current context
+		GL2 gl2 = context.getGL().getGL2(); // get current context
 
 		texture = AWTTextureIO.newTexture(displayGL.getGLProfile(), img, true);
 		texture.setTexParameteri(gl2, GL2.GL_TEXTURE_WRAP_S, GL2.GL_REPEAT);
@@ -212,7 +212,7 @@ public class Lab7 extends JPanel implements GLEventListener {
 	private Texture textureFromPainting() {
 		// TODO: write this method
 		Texture texture;
-		BufferedImage img = paintPanel.copyOSC(); // pobranie obrazka z lewego panelu
+		BufferedImage img = paintPanel.copyOSC();
 
 		GLContext context = displayGL.getContext();
 		boolean needsRelease = false;
@@ -221,7 +221,7 @@ public class Lab7 extends JPanel implements GLEventListener {
 			needsRelease = true;
 		}
 
-		GL2 gl2 = context.getGL().getGL2(); //pobranie obecnego contex
+		GL2 gl2 = context.getGL().getGL2();
 
 		texture = AWTTextureIO.newTexture(displayGL.getGLProfile(), img, true);
 		texture.setTexParameteri(gl2, GL2.GL_TEXTURE_WRAP_S, GL2.GL_REPEAT);
